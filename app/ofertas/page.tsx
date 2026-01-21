@@ -1,4 +1,5 @@
 export const runtime = 'nodejs'
+export const dynamic = 'force-dynamic';
 import TopBanner from './components/banners/TopBanner'
 import Image from 'next/image'
 import { Product } from './types'
