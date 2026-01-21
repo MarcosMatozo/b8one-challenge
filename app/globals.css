@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import "tailwindcss";
+@plugin "daisyui";
 
 :root {
   --background: #ffffff;
@@ -10,17 +12,54 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-roboto-cond: var(--font-roboto-condensed);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.swiper-wrapper{
+  margin: 0;
+}
+
+
+.swiper-button-prev, .swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.swiper-button-prev:hover, .swiper-button-next:hover{
+  opacity: 0.75;
+}
+
+.swiper-button-prev.swiper-button-disabled, .swiper-button-next.swiper-button-disabled{
+  cursor: initial;
+  opacity: 0.3;
+}
+
+.swiper-button-prev{
+  left: 0;
+  justify-content: start;
+}
+
+.swiper-button-next{
+  right: 0;
+  justify-content: end;
+}
+
+.swiper-button-prev .swiper-navigation-icon{
+  transform: rotate(180deg);
 }
