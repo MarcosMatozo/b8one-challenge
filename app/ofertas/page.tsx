@@ -44,7 +44,7 @@ export default async function OfertasPage() {
   
   // If the products array is empty, return an error message
   if(Array.isArray(products) && products.length === 0) {
-    return <main className='flex flex-wrap w-full h-dvh max-w-300 m-auto justify-center items-center px-4 font-roboto-condensed'>Erro ao buscar produtos</main>
+    return <main className='flex flex-wrap w-full h-dvh max-w-300 m-auto justify-center items-center px-4 font-roboto-condensed'>Erro ao buscar produtos <br /> prods:  {JSON.stringify(products)}</main>
   }
 
 
