@@ -1,3 +1,4 @@
+export const runtime = 'nodejs'
 import TopBanner from './components/banners/TopBanner'
 import Image from 'next/image'
 import { Product } from './types'
@@ -11,7 +12,6 @@ export const metadata: Metadata = {
   description: 'Confira as melhores ofertas da semana em eletrônicos, moda e acessórios.',
 }
 
-export const runtime = 'nodejs'
 
 /**
  * @param category url query param
