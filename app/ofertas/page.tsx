@@ -23,7 +23,7 @@ async function getProducts(category?: string): Promise<Product[]> {
 
     try{
       const res = await fetch( url, {
-        next: { revalidate: 60 }
+        cache: 'no-store'
       })
       if (!res.ok) {
         throw new Error('Erro ao buscar produtos... Tente novamente mais tarde.')
